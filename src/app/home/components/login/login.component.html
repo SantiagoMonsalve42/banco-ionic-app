@@ -1,0 +1,21 @@
+<ion-row class="ion-align-items-center">
+  <ion-col size="12" class="ion-text-center">
+      <ion-toolbar>
+        <h2>LOGIN</h2>
+      </ion-toolbar>
+      <ion-item>
+        <ion-label position="stacked">Correo electrónico</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <div class="mt-5">
+        <ion-button (click)="Login()">INICIAR SESIÓN</ion-button>
+        <br>
+        <a routerLink="/home/registro">Registrese</a>
+      </div>
+    </ion-col>
+</ion-row>
+

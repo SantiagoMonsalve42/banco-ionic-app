@@ -1,11 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { HomeComponent } from './components/home/home.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomePage,
+    path:'',
+    component: HomeComponent,
+    children:[
+      {path:'login',component: LoginComponent},
+      {path:'registro',component:RegistroComponent},
+      {path: '**',redirectTo:'login'}
+    ]
   }
 ];
 
@@ -13,4 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class HomePageRoutingModule {}
+export class HomeRoutingModule { }
